@@ -13,7 +13,7 @@ type Clock struct {
 	min int
 }
 
-// Time is a public method of the Clock struct
+// Time is a method of the Clock struct
 // It accepts two ints and returns a Clock
 // It converts hour into minutes then adds minute
 // If Clock.min is negative, add 24 hours
@@ -41,7 +41,7 @@ func Add(time, min int) Clock {
 
 // String() is a stringer, not sure how they work
 // golang.org says it uses a command called generate
-// It automatically formats calls to print -?
+// It automatically formats calls to print
 func (clock1 Clock) String() string {
 	return fmt.Sprintf("%02d:%02d", clock1.min/60, clock1.min%60)
 }
